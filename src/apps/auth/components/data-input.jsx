@@ -1,6 +1,7 @@
 import React from 'react'
 import {label} from './data.js'
 
+
 function DataInput(props) {
     const {text, input} = props
 

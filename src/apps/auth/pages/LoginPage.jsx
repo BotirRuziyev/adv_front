@@ -15,7 +15,6 @@ function App() {
           <p className='label-element'>Вход</p>
           <button className='label-element' id='close'>X</button>
         </div>
-        
         <form className='auth-block'>
           <DataInput type = 'email' text = {label[0].text} input = {label[0].input} />
           <DataInput type = 'password' text = {label[1].text} input = {label[1].input} />
