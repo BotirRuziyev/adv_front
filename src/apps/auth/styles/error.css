@@ -1,0 +1,12 @@
+.error-container {
+    margin: 0;
+    width: 100%;
+    padding: 0 2vw;
+}
+
+.error-container p{
+    display: flex;
+    padding: 0 2vw;
+    margin: 0;
+    color: red;
+}
