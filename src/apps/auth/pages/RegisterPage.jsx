@@ -14,7 +14,7 @@ function App() {
   const onFormSubmit = (formData) => {
     console.log('Данные формы:', formData);
   };
-
+  document.title = "Регистрация";
   return (
     <>
       <div className="container">

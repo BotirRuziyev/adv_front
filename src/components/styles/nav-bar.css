@@ -9,9 +9,9 @@ body{
 nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: baseline;
-    height: 100vh;
+    height: 133vh;
     width: 15vw;
     margin: 0 0 0 2vw;
     
@@ -22,7 +22,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0 1vw 3vh 0;
+    margin: 0 2vw 0vh 0;
 }
 .toggle-btn {
     background: linear-gradient(to right, #00CC5E 0%, #00B2FF 100%);
@@ -70,10 +70,11 @@ nav {
   .react-switch-label .react-switch-button {
     content: '';
     position: absolute;
-    top: 0.2vh;
-    left: 0.2vh;
-    height: 1.1vw;
-    width: 1.1vw;
+    top: 0.4vh;
+    left: 0.4vh;
+    right: 0.4vh;
+    height: 1vw;
+    width: 1vw;
     border-radius: 45px;
     transition: 0.2s;
     background: #fff;
@@ -91,8 +92,8 @@ nav {
 
 
 .user-type {
-    font-size: 1vw;
-    font-weight: 400;
+    font-size: 2vh;
+    font-weight: 600;
     color: #262626;
 }
 
@@ -104,17 +105,17 @@ nav {
     flex-direction: column;
     width: 13vw;
     height: 13vw;
-    margin: 0 0 2vh 0;
+    /* margin: 0 0 2vh 0; */
     
 }
 img.avatar {
-    width: 9vw;
-    height: 9vw;
+    width: 8vw;
+    height: 8vw;
     border-radius: 10vw;
     margin: 0;
 }
 .nickname-preview {
-    font-size: 1.2vw;
+    font-size: 1.8vh;
     font-weight: 500;
     color: #262626;
     margin: 0;
@@ -163,7 +164,7 @@ li.mb-2:nth-child(1) {
     width: 100%;
     height: 100%;
     font-size: 1vw;
-    border-right: solid 3px transparent;
+    border-right: solid 0.3vh transparent;
     border-image: linear-gradient(#3acfd5 0%, #3a4ed5 100%) 1;
     background: linear-gradient(to right, #EAEAEA00 0%, #EAEAEA70 100%);
 }
@@ -172,7 +173,7 @@ li.mb-2:nth-child(1) {
 }
 .menu-link>img {
     margin: 0 1vw 0 0;
-    width: 1vw;
+    width: 1.3vw;
 }
 .active-menu-link>img {
     margin: 0 1vw 0 0;

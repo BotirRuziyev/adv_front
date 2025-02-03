@@ -14,7 +14,7 @@ function App() {
   const onFormSubmit = (formData) => {
     console.log('Данные формы:', formData);
   };
-
+  document.title = "Авторизация";
   return (
     <>
       <div className="container">

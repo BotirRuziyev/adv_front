@@ -15,8 +15,8 @@ div.flex {
     align-items: center;
     flex-direction: row;
     
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
+    /* height: 100vh; */
     padding: 0;
     margin: 0;
     
@@ -28,12 +28,14 @@ main {
     justify-content: baseline;
     flex-direction: column;
     width: 90vw;
-    height: 100vh;
+    /* height: 100vh; */
+    margin-bottom: 10vh;
 }
 .profile-title {
     position: relative;
     padding: 0 0 0 2vw;
     font-weight: 500;
+    font-size: 3vh;
 }
 .profile-main { 
     display: flex;
@@ -41,8 +43,8 @@ main {
     background-color: #2626260F;
     backdrop-filter: blur(4px);
     border-radius: 2vw;
-    
+    gap: 3vh;
     width: 100%;
-    height: 85vh;
+    /* height: 85vh; */
     margin: 0 6vw 0 0;
 }

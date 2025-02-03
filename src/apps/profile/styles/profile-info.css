@@ -1,0 +1,66 @@
+
+.profile_info{
+    width: 61%;
+    /* height: 100vh; */
+    margin-right: 4vh;
+    margin-top: 4vh;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+}
+.check-box-role{
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vh;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .check-box-role {
+        gap: 2vh;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .check-box-role label{
+        margin-top: 0.8vh;
+    }
+}
+.check-box-role label{
+    font-size: 2vh;
+    cursor: pointer;
+    user-select: none;
+}
+.legal-data, .cont-data, .bank-data, .contract-data, .notifications-data{
+    height: 17vh;
+}
+
+.container-flex-prf-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2vh 0 0 5vh;
+    gap: 1vh;
+}
+.container-flex-prf-info h3{
+    font-size: 1.8vh;
+}
+.container-flex-prf-info button{
+    margin: 0;
+    font-size: 1.6vh;
+}
+
+
+.conteiner-prf-info{
+    background-color: white;
+    box-shadow: 0px 4px 14px 0px #00000024;
+    width: 100%;
+    border-radius: 2vh;
+}
+
+.add-info-btn{
+    width: 35vh;
+}
