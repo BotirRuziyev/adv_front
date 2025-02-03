@@ -4,7 +4,7 @@
     padding: 2rem;
     text-align: center;
   }
-  
+
   div.dark-back {
     position: absolute;
     width: 100vw;
@@ -98,7 +98,7 @@
     width: 25vw;
     height: 2vw;
     background-color: #ffffff;
-    border: solid 1px #605f5f96;
+    border: solid 0.1vh #605f5f96;
     border-radius: 0.4vw;
     font-size: 1.7vh;
     /* margin-top: 0; */
