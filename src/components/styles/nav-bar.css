@@ -82,7 +82,7 @@ nav {
   }
   
   .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
-    left: calc(100% - 2px);
+    left: calc(100% - 4px);
     transform: translateX(-100%);
   }
   
