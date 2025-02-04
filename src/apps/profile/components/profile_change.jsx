@@ -8,7 +8,6 @@ function ProfileChange({ selectedAvatar, setSelectedAvatar }) {
       <img className="profile-avatar" src={selectedAvatar} alt="Аватар профиля" />
       <p className="profile-status">Статус: <span id="status-indicator">a</span> Активный</p>
 
-      {/* Передаем selectedAvatar и setSelectedAvatar в AvatarSelection */}
       <AvatarSelection onSelectAvatar={setSelectedAvatar} selectedAvatar={selectedAvatar} />
 
       <div className="profile-mail">

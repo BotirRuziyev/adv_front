@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/profile.css";
-import Menu from "../../../components/Navigation/menu";
+import Menu from "../../../components/navigation/menu";
 import ProfileChange from "../components/profile_change";
 import ProfileDocx from "../components/profile_docx";
 

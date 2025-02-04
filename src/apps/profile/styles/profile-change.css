@@ -37,7 +37,7 @@
     border-radius: 10vw;
 }
 
-.avatar-select-block {
+/* .avatar-select-block {
     position: relative;
     display: flex;
     justify-content: center;
@@ -51,26 +51,69 @@
     border: solid 0.1vw #2626263f;
     border-radius: 10vw;
     margin: 2vh 0 0 0; 
+} */
+
+.avatar-select-block {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Выровняем аватарки слева */
+    align-items: center;
+    flex-direction: row;
+    width: 54%;
+    height: 9%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap; /* Запрещает перенос элементов */
+    background-color: #ffffff;
+    border: solid 0.1vw #2626263f;
+    border-radius: 10vw;
+    margin: 2vh 0 0 0;
+    padding: 0 1vw; /* Чтобы аватары не прилипали */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #ffffff;
 }
-.avatar-select {
+
+/* .avatar-select {
     display: flex;
     position: relative;
     padding: 0;
     margin: 0 0.3vw;
     /* width: 27%; */
-    /* height: 90%; */
+    /* height: 90%; 
     border: none;
     border-radius: 10vw;
     overflow: hidden;
     background-color: transparent;
     cursor: pointer;
+} */
+.avatar-select-block::-webkit-scrollbar {
+    height: 6px !important;
+}
+
+.avatar-select-block::-webkit-scrollbar-thumb {
+    background-color: #888 !important;
+    border-radius: 3px !important;
+}
+
+.avatar-select {
+    display: flex;
+    min-width: 29%;
+    height: 97%;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    justify-content: center;
+    align-items: center;
 }
 .avatar-select>img {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 9vh;
+    /* height: 100%; */
     user-select: none; 
     pointer-events: none; 
+    object-fit: cover;
     transition: transform 0.1s ease-in-out; 
 }
 .avatar-select.active {
