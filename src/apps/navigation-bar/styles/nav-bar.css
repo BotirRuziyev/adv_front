@@ -164,18 +164,19 @@ li.mb-2:nth-child(1) {
     width: 100%;
     height: 100%;
     font-size: 1vw;
+    font-weight: 600;
     border-right: solid 0.3vh transparent;
     border-image: linear-gradient(#3acfd5 0%, #3a4ed5 100%) 1;
     background: linear-gradient(to right, #EAEAEA00 0%, #EAEAEA70 100%);
 }
-.menu-link:visited {
+/* .menu-link:visited {
     color: #262626;
-}
+} */
 .menu-link>img {
     margin: 0 1vw 0 0;
     width: 1.3vw;
 }
 .active-menu-link>img {
     margin: 0 1vw 0 0;
-    width: 1vw;
+    width: 1.3vw;
 }

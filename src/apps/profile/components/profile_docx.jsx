@@ -44,7 +44,6 @@ function ProfileDocx() {
                     <button className="change-password add-info-btn">Настроить уведомления</button>
                 </div>
             </div>
-            
         </div>
     )
 }

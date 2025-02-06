@@ -60,7 +60,7 @@
     align-items: center;
     flex-direction: row;
     width: 54%;
-    height: 9%;
+    height: 10%;
     overflow-y: hidden;
     overflow-x: auto;
     white-space: nowrap; /* Запрещает перенос элементов */

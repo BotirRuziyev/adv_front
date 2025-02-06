@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import '../../profile/styles/profile.css'   
-import Menu from '../../../components/Navigation/menu'
+import Menu from '../../navigation-bar/pages/menu'
 import ProfileChange from '../../profile/components/profile_change'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
