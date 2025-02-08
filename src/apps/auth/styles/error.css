@@ -1,7 +1,7 @@
 .error-container {
     margin: 0;
     width: 100%;
-    padding: 0 2vw;
+    /* padding: 0 2vw; */
 }
 
 .error-container p{
@@ -9,4 +9,5 @@
     padding: 0 2vw;
     margin: 0;
     color: red;
+    font-size: 2vh;
 }

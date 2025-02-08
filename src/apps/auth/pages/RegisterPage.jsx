@@ -1,20 +1,29 @@
-import { useState } from 'react';
-import '../styles/auth.css';
-import DataInput from '../components/data-input.jsx';
-import { label } from '../components/data.js';
-import useLoginForm from '../hooks/user-login-val.js';
-import ErrorMessage from '../components/errors-mes.jsx';
+import { useState } from "react";
+import "../styles/auth.css";
+import DataInput from "../components/data-input.jsx";
+import { label } from "../components/data.js";
+import useLoginForm from "../hooks/user-login-val.js";
+import ErrorMessage from "../components/errors-mes.jsx";
+import useRegister from "../hooks/useRegister";
 
-function App() {
+function RegisterPage() {
   const { values, errors, handleChange, handleSubmit } = useLoginForm(
-    { email: '', password: '' },  // initialValues
-    true  // isRegisterForm (регистрация, с валидацией пароля)
+    { email: "", password: "" },
+    true // Регистрация (с валидацией пароля)
   );
 
-  const onFormSubmit = (formData) => {
-    console.log('Данные формы:', formData);
+  const { register, loading, serverError } = useRegister();
+
+  const onFormSubmit = async (formData) => {
+    const result = await register(formData);
+    if (result.success) {
+      alert("Регистрация успешна! Теперь войдите в аккаунт.");
+      window.location.href = "/login"; // Перенаправляем на страницу входа
+    }
   };
+
   document.title = "Регистрация";
+
   return (
     <>
       <div className="container">
@@ -27,7 +36,7 @@ function App() {
             type="email"
             text={label[0].text}
             input={{
-              name: 'email',
+              name: "email",
               value: values.email,
               onChange: handleChange,
               placeholder: label[0].input,
@@ -39,15 +48,20 @@ function App() {
             type="password"
             text={label[1].text}
             input={{
-              name: 'password',
+              name: "password",
               value: values.password,
               onChange: handleChange,
               placeholder: label[1].input,
             }}
           />
           <ErrorMessage message={errors.password} />
-
-          <button type="submit" id="sign-in">Зарегистрироваться</button>
+          <div className="error-container">
+            {serverError && <p className="error">{serverError}</p>}
+          </div>
+          
+          <button type="submit" id="sign-in" disabled={loading}>
+            {loading ? "Загрузка..." : "Зарегистрироваться"}
+          </button>
         </form>
       </div>
       <div className="dark-back"></div>
@@ -55,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default RegisterPage;

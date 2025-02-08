@@ -97,8 +97,8 @@
 
 .avatar-select {
     display: flex;
-    min-width: 29%;
-    height: 97%;
+    min-width: 9vh;
+    height: 9vh;
     margin-right: 10px;
     border-radius: 50%;
     overflow: hidden;

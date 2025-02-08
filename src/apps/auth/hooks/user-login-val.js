@@ -13,8 +13,8 @@ const useLoginForm = (initialValues, isRegisterForm = false) => {  // Добав
     if (isRegisterForm && name === 'password') {
       const errors = [];
 
-      if (value.length < 6) {
-        errors.push('Пароль должен быть не менее 6 символов');
+      if (value.length < 8) {
+        errors.push('Пароль должен быть не менее 8 символов');
       }
       if (!/[A-Z]/.test(value)) {
         errors.push('Пароль должен содержать хотя бы одну заглавную букву');

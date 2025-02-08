@@ -1,20 +1,29 @@
-import { useState } from 'react';
-import '../styles/auth.css';
-import DataInput from '../components/data-input.jsx';
-import { label } from '../components/data.js';
-import useLoginForm from '../hooks/user-login-val.js';
-import ErrorMessage from '../components/errors-mes.jsx';
+import { useState } from "react";
+import "../styles/auth.css";
+import DataInput from "../components/data-input.jsx";
+import { label } from "../components/data.js";
+import useLoginForm from "../hooks/user-login-val.js";
+import ErrorMessage from "../components/errors-mes.jsx";
+import useLogin from "../hooks/useAuth.js"; // Подключаем хук авторизации
 
-function App() {
+function LoginPage() {
   const { values, errors, handleChange, handleSubmit } = useLoginForm(
-    { email: '', password: '' },  // initialValues
-    false  // isRegisterForm (вход, без валидации пароля)
+    { email: "", password: "" },
+    false // Вход (без валидации пароля)
   );
 
-  const onFormSubmit = (formData) => {
-    console.log('Данные формы:', formData);
+  const { login, loading, serverError } = useLogin();
+
+  const onFormSubmit = async (formData) => {
+    const result = await login(formData);
+    if (result.success) {
+      alert("Авторизация успешна!");
+      window.location.href = "/dashboard"; // Перенаправляем в личный кабинет
+    }
   };
+
   document.title = "Авторизация";
+
   return (
     <>
       <div className="container">
@@ -27,7 +36,7 @@ function App() {
             type="email"
             text={label[0].text}
             input={{
-              name: 'email',
+              name: "email",
               value: values.email,
               onChange: handleChange,
               placeholder: label[0].input,
@@ -39,15 +48,21 @@ function App() {
             type="password"
             text={label[1].text}
             input={{
-              name: 'password',
+              name: "password",
               value: values.password,
               onChange: handleChange,
               placeholder: label[1].input,
             }}
           />
+          <ErrorMessage message={errors.password} />
 
-          <button type="submit" id="sign-in">Войти</button>
-          <div id="reg-label">Нет аккаунта? <a href="/register"> Зарегистрироваться</a></div>
+          <div className="error-container">
+            {serverError && <p className="error">{serverError}</p>}
+          </div>
+          <button type="submit" id="sign-in" disabled={loading}>
+            {loading ? "Загрузка..." : "Войти"}
+          </button>
+          <div id="reg-label">Нет аккаунта? <a href="/auth/register"> Зарегистрироваться</a></div>
         </form>
       </div>
       <div className="dark-back"></div>
@@ -55,4 +70,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginPage;
