@@ -4,7 +4,9 @@ import DataInput from "../components/data-input.jsx";
 import { label } from "../components/data.js";
 import useLoginForm from "../hooks/user-login-val.js";
 import ErrorMessage from "../components/errors-mes.jsx";
-import useLogin from "../hooks/useAuth.js"; // Подключаем хук авторизации
+import useLogin from "../hooks/useAuth.js"; // Теперь это корректно
+
+
 
 function LoginPage() {
   const { values, errors, handleChange, handleSubmit } = useLoginForm(
@@ -42,7 +44,7 @@ function LoginPage() {
               placeholder: label[0].input,
             }}
           />
-          <ErrorMessage message={errors.email} />
+          <ErrorMessage message={errors.email} /> 
 
           <DataInput
             type="password"

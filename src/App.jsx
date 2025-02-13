@@ -32,12 +32,14 @@ import AuthRoutes from "./apps/auth/AuthRoutes";
 import Layout from "./apps/navigation-bar/pages/layout";
 import Profile from "./apps/profile/pages/profile";
 import MainPage from "./apps/main/pages/MainPage";
+import AdvRoutes from "./apps/adv/AdvRoutes";
+import avatars from "./assets/avatars.js"
 
 function App() {
   // Состояние для выбранной аватарки
   const [selectedAvatar, setSelectedAvatar] = useState(() => {
     // Загружаем аватарку из LocalStorage при первой загрузке
-    return localStorage.getItem("selectedAvatar") || "src/assets/avatars/43332.jpg";
+    return localStorage.getItem("selectedAvatar") || avatars.men_1;
   });
 
   const handleAvatarChange = (avatar) => {
@@ -57,6 +59,7 @@ function App() {
           {/* Вкладываем дочерние маршруты */}
           <Route path="profile" element={<Profile onAvatarChange={handleAvatarChange} selectedAvatar={selectedAvatar} />} />
           <Route path="main" element={<MainPage />} />
+          <Route path="/adv/*" element={<AdvRoutes />} />
         </Route>
       </Routes>
     </Router>

@@ -1,14 +1,15 @@
 import React from 'react';
 import '../styles/profile-change.css';
+import avatar_icon from "../../../assets/avatars.js"
 
 function AvatarSelection({ onSelectAvatar, selectedAvatar }) {
   const avatars = [
-    "src/assets/avatars/43332.jpg",
-    "src/assets/avatars/51491.jpg",
-    "src/assets/avatars/51578.jpg",
-    "src/assets/avatars/2151100205(2).png",
-    "src/assets/avatars/2151107459(2).png",
-    "src/assets/avatars/2151133865(2).png",
+    avatar_icon.men_1,
+    avatar_icon.men_2,
+    avatar_icon.men_3,
+    avatar_icon.women_1,
+    avatar_icon.women_2,
+    avatar_icon.women_3
   ];
 
   return (
