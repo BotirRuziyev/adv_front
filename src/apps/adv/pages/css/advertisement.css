@@ -1,0 +1,57 @@
+.advertisement-page {
+  width: 100%;
+}
+.advertisement-page .channels-table .table .table-head .th .select-menu {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.14);
+  background: linear-gradient(90deg, #434343 0%, #606060 100%);
+  border-radius: 10px;
+  padding: 13px 10px;
+}
+.advertisement-page .channels-table .table .table-head .th .select-menu .select-option {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+.advertisement-page .channels-table .table .table-head .th .select-menu .select-option .form-checkbox input {
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+}
+.advertisement-page .channels-table .table .table-body .td {
+  width: auto !important;
+}
+.advertisement-page .channels-table .table .table-body .td.actions-td {
+  text-align: center;
+}
+.advertisement-page .channels-table .table .table-body .td.status-td span {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-gray);
+  line-height: 10px;
+}
+.advertisement-page .channels-table .table .table-body .td.status-td span.bg-gray {
+  background: #f1f1f1;
+}
+.advertisement-page .channels-table .table .table-body .td.status-td span.bg-green {
+  color: #009042;
+  background: #cdffe4;
+}
+.advertisement-page .channels-table .table .table-body .td.status-td span.bg-brown {
+  color: #c2670b;
+  background: #ffebd8;
+}
+.advertisement-page .channels-table .table .table-body .td.status-td span.bg-orange {
+  color: #f00;
+  background: #ffcece;
+}/*# sourceMappingURL=advertisement.css.map */

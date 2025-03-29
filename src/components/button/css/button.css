@@ -1,0 +1,16 @@
+.button-gradient {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #00cc5e 0%, #00b2ff 100%);
+  border-radius: 30px;
+  padding: 20px 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  line-height: 11px;
+  color: #fff;
+}/*# sourceMappingURL=button.css.map */

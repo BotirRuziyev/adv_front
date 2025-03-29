@@ -1,0 +1,75 @@
+.swiper-container {
+  width: calc(100% - 200px);
+  padding: 0 42px;
+  position: relative;
+}
+.swiper-container .chanel-swiper {
+  width: 100%;
+  position: static;
+  align-items: center;
+  padding: 28px 0;
+}
+.swiper-container .chanel-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-gray);
+  cursor: pointer;
+}
+.swiper-container .chanel-swiper .swiper-slide::after {
+  content: "";
+  border-radius: 2px 2px 0 0;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #00cc5e 0%, #00b2ff 100%);
+  position: absolute;
+  top: calc(100% + 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.swiper-container .chanel-swiper .swiper-slide.active {
+  font-weight: 700;
+}
+.swiper-container .chanel-swiper .swiper-slide.active::after {
+  opacity: 1;
+  visibility: visible;
+}
+.swiper-container .chanel-swiper .swiper-slide.active .slide-img {
+  padding: 3px;
+  border-color: transparent;
+  background: url("@/assets/images/chanel-active.svg") no-repeat center/cover;
+}
+.swiper-container .chanel-swiper .swiper-slide .slide-img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 3px solid #dbdbdb;
+  margin-bottom: 8px;
+}
+.swiper-container .chanel-swiper .swiper-slide .slide-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swiper-container .chanel-swiper .swiper-button-prev,
+.swiper-container .chanel-swiper .swiper-button-next {
+  background: var(--text-gray) url("@/assets/icons/swiper-prev.svg") no-repeat center/7.5px;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+}
+.swiper-container .chanel-swiper .swiper-button-prev::after,
+.swiper-container .chanel-swiper .swiper-button-next::after {
+  display: none;
+}
+.swiper-container .chanel-swiper .swiper-button-next {
+  background: var(--text-gray) url("@/assets/icons/swiper-next.svg") no-repeat center/7.5px;
+}/*# sourceMappingURL=swiper.css.map */

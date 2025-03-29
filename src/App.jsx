@@ -34,6 +34,7 @@ import Profile from "./apps/profile/pages/profile";
 import MainPage from "./apps/main/pages/MainPage";
 import AdvRoutes from "./apps/adv/AdvRoutes";
 import avatars from "./assets/avatars.js"
+import Income from "./apps/income/pages/Income.jsx";
 
 function App() {
   // Состояние для выбранной аватарки
@@ -60,6 +61,7 @@ function App() {
           <Route path="profile" element={<Profile onAvatarChange={handleAvatarChange} selectedAvatar={selectedAvatar} />} />
           <Route path="main" element={<MainPage />} />
           <Route path="/adv/*" element={<AdvRoutes />} />
+          <Route path="/income*" element={<Income />} />
         </Route>
       </Routes>
     </Router>

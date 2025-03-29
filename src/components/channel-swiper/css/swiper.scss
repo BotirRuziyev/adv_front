@@ -1,0 +1,73 @@
+.swiper-container {
+    width: calc(100% - 200px);
+    padding: 0 42px;
+    position: relative;
+    .chanel-swiper {
+        width: calc(100%);
+        position: static;
+        align-items: center;
+        padding: 28px 0;
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            color: var(--text-gray);
+            cursor: pointer;
+            &::after {
+                content: "";
+                border-radius: 2px 2px 0 0;
+                width: 50px;
+                height: 4px;
+                background: linear-gradient(90deg, #00cc5e 0%, #00b2ff 100%);
+                position: absolute;
+                top: calc(100% + 24px);
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                visibility: hidden;
+            }
+            &.active {
+                font-weight: 700;
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .slide-img {
+                    padding: 3px;
+                    border-color: transparent;
+                    background: url("@/assets/images/chanel-active.svg") no-repeat center/cover;
+                }
+            }
+            .slide-img {
+                width: 68px;
+                height: 68px;
+                border-radius: 50%;
+                border: 3px solid #dbdbdb;
+                margin-bottom: 8px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            background: var(--text-gray) url("@/assets/icons/swiper-prev.svg") no-repeat center/7.5px;
+            border-radius: 6px;
+            width: 26px;
+            height: 26px;
+            &::after {
+                display: none;
+            }
+        }
+        .swiper-button-next {
+            background: var(--text-gray) url("@/assets/icons/swiper-next.svg") no-repeat center/7.5px;
+        }
+    }
+}

@@ -1,22 +1,65 @@
+@import "/src/assets/fonts/Geometria/stylesheet.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/static/Raleway-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/static/Raleway-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/static/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/static/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/static/Raleway-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-image: url('/src/assets/images/background.svg');
-  background-color: #ffffff;  
+  background-image: url("/src/assets/images/background.svg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: bottom right;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+:root {
+  --midle-gray: #606060;
+  --dark-gray: #434343;
+  --light-gray: #eee;
+  --input-gray: #bcbcbc;
+  --text-gray: #262626;
+}
+:root {
+  --font-family: "Raleway", sans-serif;
+  --second-family: "Geometria", sans-serif;
+}
 body {
   display: flex;
 
@@ -25,8 +68,6 @@ body {
   margin: 0;
 }
 
-
-
 body {
   margin: 0;
   display: flex;
@@ -34,18 +75,99 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
+.main {
+  width: 100%;
+  min-height: 100%;
+  backdrop-filter: blur(14px);
+  background: rgba(38, 38, 38, 0.06);
+  border-radius: 40px;
+  padding: 40px;
+}
+main {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 40px 40px 0;
+  overflow: hidden;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
+button {
+  cursor: pointer;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin-bottom: 40px;
+  border: 1px solid dashed;
+}
+.page-header .header-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: var(--text-gray);
+}
+.page-header .header-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #00cc5e 0%, #00b2ff 100%);
+  border-radius: 30px;
+  padding: 13px 24px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.MuiFormControl-root {
+  width: 100%;
+  text-transform: capitalize;
+}
+.MuiFormControl-root .MuiInputBase-root {
+  border-radius: 6px;
+}
+.MuiFormControl-root label {
+  display: none;
+}
+.MuiFormControl-root input {
+  padding: 0 14px;
+  height: 48px;
+  font-family: var(--font-family);
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  line-height: 10px;
+  color: #4e4e4e;
+}
+.MuiFormControl-root .MuiOutlinedInput-notchedOutline {
+  border: 1px solid #d9d9d9;
+}
+.MuiFormControl-root .MuiButtonBase-root {
+  margin: 0;
+  /* margin-right: 14px; */
+  background: url("@/assets/icons/calendar.svg") no-repeat center/16px;
+}
+.MuiFormControl-root .MuiButtonBase-root svg {
+  display: none;
 }

@@ -1,0 +1,87 @@
+.income-page {
+  width: 100%;
+}
+.income-page .page-header .right-block {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.income-page .page-header .right-block .header-button {
+  padding: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.income-page .page-header .right-block .header-button:nth-child(1) img {
+  height: 26px;
+}
+.income-page .income-head {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.income-page .income-head .right-block .period {
+  margin-bottom: 40px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.14);
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  border-radius: 20px;
+  padding: 50px 30px;
+}
+.income-page .income-head .right-block .period .form-control {
+  margin-bottom: 30px;
+}
+.income-page .income-head .right-block .period .form-control .label {
+  display: block;
+  margin-bottom: 16px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+  color: var(--dark-gray);
+}
+.income-page .income-head .right-block .funds {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.14);
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  border-radius: 20px;
+  padding: 30px;
+}
+.income-page .income-head .right-block .funds-img {
+  line-height: 0;
+}
+.income-page .income-head .right-block .funds-body .funds-info {
+  margin-bottom: 20px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: left;
+  line-height: 14px;
+  color: var(--text-gray);
+}
+.income-page .income-head .right-block .funds-body .funds-info span {
+  font-weight: 500;
+}
+.income-page .income-head .right-block .funds-body .button-gradient {
+  padding: 14px 20px;
+}
+.income-page .channels-table .table .table-head .th {
+  padding: 26px 16px;
+}
+.income-page .channels-table .table .table-head .th:first-child {
+  text-align: left;
+}
+.income-page .channels-table .table .table-head .th:first-child::before {
+  display: none;
+}
+.income-page .channels-table .table .table-body .td {
+  width: 25%;
+  padding: 22px 16px;
+  line-height: 10px;
+}/*# sourceMappingURL=Income.css.map */

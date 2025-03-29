@@ -5,12 +5,11 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-image: url('/src/assets/images/background.svg');
-  background-color: #ffffff;  
+  background-image: url("/src/assets/images/background.svg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: bottom right;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,8 +45,6 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
-
 
 @media (prefers-color-scheme: light) {
   :root {
