@@ -7,7 +7,7 @@ import listcheck from "@/assets/icons/list-check.svg"
 import rublIcon from "@/assets/icons/rubl.svg"
 import ChartComponent from "../../../components/ChartComponent/ChartComponent";
 import MonthPicker from '../../../components/monthModal';
-import './css/income.css'
+import './css/Income.css'
 
 
 const Income = () => {
