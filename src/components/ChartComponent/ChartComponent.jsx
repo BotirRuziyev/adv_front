@@ -10,9 +10,10 @@ import {
     Title,
     Tooltip,
     Legend,
+    BarController
 } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, BarController, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend);
 import "./css/index.css"
 import PropTypes from "prop-types";
 const ChartComponent = ({ title, lefttitle, righttitle }) => {
