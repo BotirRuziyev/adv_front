@@ -1,13 +1,13 @@
 
 
 import Button from '../../../components/button/button';
-import './css/income.css'
 import filestats from "@/assets/icons/file-stats.svg"
 import walletsearch from "@/assets/icons/wallet-search-svg.svg"
 import listcheck from "@/assets/icons/list-check.svg"
 import rublIcon from "@/assets/icons/rubl.svg"
 import ChartComponent from "../../../components/ChartComponent/ChartComponent";
 import MonthPicker from '../../../components/monthModal';
+import './css/income.css'
 
 
 const Income = () => {
