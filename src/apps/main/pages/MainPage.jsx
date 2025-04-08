@@ -17,11 +17,13 @@ import deletegradientIcon from "@/assets/icons/Status_delete_button-gradient.svg
 import ChartComponent from "../../../components/ChartComponent/ChartComponent";
 import AddChannnel from "../../../components/add-channel-modal/AddChannnel";
 import TableModal from "../../../components/table-modal/TableModal";
+import AllChanels from "../../../components/all-channels/AllChanels";
 
 function Main() {
   const [addChannel, setAddChannel] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
   const [pauseModal, setPauseModal] = useState(false);
+  const [allChannelsModal, setAllChannelsModal] = useState(false);
   document.title = "Главная страница";
   const [selectedAvatar] = useState(() => {
     return (
@@ -86,6 +88,7 @@ function Main() {
 
   const openAddChanelModal = () => setAddChannel(true);
   const closeAddChanelModal = () => setAddChannel(false);
+  const openAllChannelsModal = () => setAllChannelsModal(true);
 
   return (
     <div className="main-body">
@@ -97,7 +100,7 @@ function Main() {
               <img src={addchanel} alt="" />
               Добавить канал
             </button>
-            <button className="burger-btn">
+            <button className="burger-btn" onClick={openAllChannelsModal}>
               <img src={burgerIcon} alt="" />
             </button>
           </div>
@@ -1095,6 +1098,10 @@ function Main() {
         description="Канал не будет доступен для новых публикаций"
         isOpen={pauseModal}
         onClose={() => setPauseModal(false)}
+      />
+      <AllChanels
+        isOpen={allChannelsModal}
+        onClose={() => setAllChannelsModal(false)}
       />
     </div>
   );
