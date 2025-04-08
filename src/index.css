@@ -40,6 +40,7 @@
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
   background-image: url("/src/assets/images/background.svg");
+  background-attachment: fixed;
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -74,6 +75,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+.main-body {
+  width: 100%;
 }
 .main {
   width: 100%;
@@ -137,6 +141,16 @@ button {
   font-size: 16px;
   text-align: center;
   color: #fff;
+}
+.border-gradient {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #00cc5e 0%, #0066ff 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 .MuiFormControl-root {

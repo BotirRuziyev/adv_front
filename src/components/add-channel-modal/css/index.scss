@@ -1,0 +1,211 @@
+.add-chanel__modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    background: rgba($color: #000000, $alpha: 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+
+    &.show {
+        visibility: visible;
+        background: rgba($color: #000000, $alpha: 0.7);
+        opacity: 1;
+        .modal-content {
+            transform: scale(1);
+        }
+    }
+    .modal-in {
+        position: relative;
+        .close-btn {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+        }
+    }
+    .modal-content {
+        max-width: 510px;
+        width: 100%;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px;
+        transform: scale(0.9);
+        transition: 0.3s;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .modal-description {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            text-align: left;
+            color: #4e4e4e;
+            span {
+                display: block;
+                margin-bottom: 14px;
+                font-family: var(--font-family);
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 129%;
+                color: #4e4e4e;
+                a {
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    color: #00c962;
+                }
+            }
+        }
+        .add-chanel__form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .MuiFormControl-root {
+                .MuiButtonBase-root {
+                    background: transparent;
+                    padding: 0;
+                    svg {
+                        display: block;
+                    }
+                }
+            }
+            .MuiTextField-root {
+                border: 1px solid #d9d9d9;
+                border-radius: 6px;
+                position: relative;
+                input {
+                    border: 0;
+                    padding: 0 0 0 50px;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-align: left;
+                    color: #4e4e4e;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                &:nth-child(1) {
+                    &::after {
+                        content: "от -";
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        top: calc(50% + 2px);
+                        left: 14px;
+                        transform: translateY(-50%);
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        white-space: nowrap;
+                        font-size: 16px;
+                        line-height: 100%;
+                        text-align: left;
+                        color: #4e4e4e;
+                        z-index: 2;
+                    }
+                }
+                &:nth-child(2) {
+                    &::after {
+                        content: "до -";
+                        width: auto;
+                        height: auto;
+                        position: absolute;
+                        top: calc(50% + 2px);
+                        left: 14px;
+                        transform: translateY(-50%);
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        white-space: nowrap;
+                        font-size: 16px;
+                        line-height: 100%;
+                        text-align: left;
+                        color: #4e4e4e;
+                        z-index: 2;
+                    }
+                }
+            }
+            .form-clock {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 16px;
+                .button-wrapper {
+                    display: inline-block;
+                    .add-clock__btn {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        border-radius: 30px;
+                        padding: 14px;
+                        font-family: var(--font-family);
+                        font-weight: 700;
+                        font-size: 14px;
+                        text-align: center;
+                        color: var(--dark-gray);
+                    }
+                }
+            }
+            .terms-consent {
+                .checkbox-group {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 5px;
+                    .form-control {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .form-check {
+                            width: 16px;
+                            height: 16px;
+                            background-color: #fff !important;
+                            border: 1px solid #9b9b9b;
+                            border-radius: 2px;
+                            box-shadow: none;
+                        }
+                        label {
+                            font-family: var(--font-family);
+                            font-weight: 400;
+                            font-size: 16px;
+                            text-align: center;
+                            color: #4e4e4e;
+                        }
+                    }
+                }
+            }
+            .form-button {
+                display: flex;
+                gap: 10px;
+                .send-btn {
+                    width: 100%;
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-align: center;
+                    color: var(--dark-gray);
+                }
+            }
+        }
+    }
+}
+.MuiYearCalendar-root {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.MuiMultiSectionDigitalClockSection-root {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

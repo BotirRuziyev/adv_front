@@ -201,7 +201,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  height: 449px;
 }
 
 .channels-table .table-top {
@@ -383,7 +382,7 @@
   width: 310px;
 }
 .channels-table .table-body .td:last-child {
-  width: 150px;
+  width: 162px;
   border-right: 1px solid #d6d6d6;
   border-radius: 0 20px 20px 0;
 }
@@ -523,6 +522,30 @@
 }
 .channels-table .table-body .td.schedule-td .schedule-text {
   max-width: 159px;
+}
+.channels-table .table-body .td .pause-btn,
+.channels-table .table-body .td .delete-btn {
+  position: relative;
+}
+.channels-table .table-body .td .pause-btn:hover img:nth-child(1),
+.channels-table .table-body .td .delete-btn:hover img:nth-child(1) {
+  opacity: 1;
+}
+.channels-table .table-body .td .pause-btn:hover img:nth-child(2),
+.channels-table .table-body .td .delete-btn:hover img:nth-child(2) {
+  opacity: 0;
+}
+.channels-table .table-body .td .pause-btn img,
+.channels-table .table-body .td .delete-btn img {
+  transition: 0.3s;
+}
+.channels-table .table-body .td .pause-btn img:nth-child(1),
+.channels-table .table-body .td .delete-btn img:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 .channels-table .table-bottom {
   display: flex;

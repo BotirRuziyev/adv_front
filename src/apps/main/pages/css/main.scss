@@ -201,7 +201,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
-        height: 449px;
     }
 }
 .channels-table {
@@ -382,7 +381,7 @@
                     width: 310px;
                 }
                 &:last-child {
-                    width: 150px;
+                    width: 162px;
                     border-right: 1px solid #d6d6d6;
                     border-radius: 0 20px 20px 0;
                 }
@@ -524,6 +523,30 @@
                 &.schedule-td {
                     .schedule-text {
                         max-width: 159px;
+                    }
+                }
+                .pause-btn,
+                .delete-btn {
+                    position: relative;
+                    &:hover {
+                        img {
+                            &:nth-child(1) {
+                                opacity: 1;
+                            }
+                            &:nth-child(2) {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    img {
+                        transition: 0.3s;
+                        &:nth-child(1) {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            opacity: 0;
+                        }
                     }
                 }
             }

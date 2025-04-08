@@ -1,0 +1,70 @@
+.tabla-modal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.tabla-modal.show {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+.tabla-modal.show .modal-content {
+  transform: scale(1);
+}
+.tabla-modal .modal-content {
+  max-width: 510px;
+  width: 100%;
+  max-height: calc(100% - 100px);
+  background: #fff;
+  position: relative;
+  border-radius: 20px;
+  padding: 40px;
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.tabla-modal .modal-content .close-btn {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+.tabla-modal .modal-content .modal-title {
+  margin-bottom: 16px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  line-height: 14px;
+  color: var(--dark-gray);
+}
+.tabla-modal .modal-content .modal-description {
+  margin-bottom: 30px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  text-align: center;
+  color: #474747;
+}
+.tabla-modal .modal-content .modal-button {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+.tabla-modal .modal-content .modal-button .no-btn {
+  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #474747;
+}/*# sourceMappingURL=index.css.map */

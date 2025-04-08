@@ -1,0 +1,202 @@
+@charset "UTF-8";
+.add-chanel__modal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.add-chanel__modal.show {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+.add-chanel__modal.show .modal-content {
+  transform: scale(1);
+}
+.add-chanel__modal .modal-in {
+  position: relative;
+}
+.add-chanel__modal .modal-in .close-btn {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+.add-chanel__modal .modal-content {
+  max-width: 510px;
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+.add-chanel__modal .modal-content::-webkit-scrollbar {
+  display: none;
+}
+.add-chanel__modal .modal-content .modal-description {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--light-gray);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: left;
+  color: #4e4e4e;
+}
+.add-chanel__modal .modal-content .modal-description span {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  color: #4e4e4e;
+}
+.add-chanel__modal .modal-content .modal-description span a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #00c962;
+}
+.add-chanel__modal .modal-content .add-chanel__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiFormControl-root .MuiButtonBase-root {
+  background: transparent;
+  padding: 0;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiFormControl-root .MuiButtonBase-root svg {
+  display: block;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiTextField-root {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  position: relative;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiTextField-root input {
+  border: 0;
+  padding: 0 0 0 50px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: #4e4e4e;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiTextField-root input:focus {
+  outline: none;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiTextField-root:nth-child(1)::after {
+  content: "от -";
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: calc(50% + 2px);
+  left: 14px;
+  transform: translateY(-50%);
+  font-family: var(--font-family);
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: left;
+  color: #4e4e4e;
+  z-index: 2;
+}
+.add-chanel__modal .modal-content .add-chanel__form .MuiTextField-root:nth-child(2)::after {
+  content: "до -";
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: calc(50% + 2px);
+  left: 14px;
+  transform: translateY(-50%);
+  font-family: var(--font-family);
+  font-weight: 400;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: left;
+  color: #4e4e4e;
+  z-index: 2;
+}
+.add-chanel__modal .modal-content .add-chanel__form .form-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
+.add-chanel__modal .modal-content .add-chanel__form .form-clock .button-wrapper {
+  display: inline-block;
+}
+.add-chanel__modal .modal-content .add-chanel__form .form-clock .button-wrapper .add-clock__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 30px;
+  padding: 14px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: var(--dark-gray);
+}
+.add-chanel__modal .modal-content .add-chanel__form .terms-consent .checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.add-chanel__modal .modal-content .add-chanel__form .terms-consent .checkbox-group .form-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.add-chanel__modal .modal-content .add-chanel__form .terms-consent .checkbox-group .form-control .form-check {
+  width: 16px;
+  height: 16px;
+  background-color: #fff !important;
+  border: 1px solid #9b9b9b;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.add-chanel__modal .modal-content .add-chanel__form .terms-consent .checkbox-group .form-control label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #4e4e4e;
+}
+.add-chanel__modal .modal-content .add-chanel__form .form-button {
+  display: flex;
+  gap: 10px;
+}
+.add-chanel__modal .modal-content .add-chanel__form .form-button .send-btn {
+  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.MuiYearCalendar-root::-webkit-scrollbar {
+  display: none;
+}
+
+.MuiMultiSectionDigitalClockSection-root::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
