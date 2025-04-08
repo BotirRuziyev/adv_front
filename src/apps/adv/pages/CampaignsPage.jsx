@@ -13,11 +13,14 @@ import filestats from "@/assets/icons/file-stats.svg";
 import deleteIcon from "@/assets/icons/Status_delete_button.svg";
 import cloceCircle from "@/assets/icons/clock-circle.svg";
 import deletegradientIcon from "@/assets/icons/Status_delete_button-gradient.svg";
+import AllChanels from "../../../components/all-channels/AllChanels";
 
 const CampaignsPage = () => {
   const [onOpen, setOpen] = useState(false);
   const [addChannel, setAddChannel] = useState(false);
   const [deleteModal, setDeleteModal] = useState(false);
+  const [allChannelsModal, setAllChannelsModal] = useState(false);
+
   document.title = "Главная страница";
   const [selectedAvatar] = useState(() => {
     return (
@@ -87,6 +90,7 @@ const CampaignsPage = () => {
   const deleteModalOpen = () => {
     setDeleteModal(true);
   };
+  const openAllChannelsModal = () => setAllChannelsModal(true);
   return (
     <div className="advertisement-page">
       <header className="page-header">
@@ -104,7 +108,7 @@ const CampaignsPage = () => {
               <img src={addchanel} alt="" />
               Добавить канал
             </button>
-            <button className="burger-btn">
+            <button className="burger-btn" onClick={openAllChannelsModal}>
               <img src={burgerIcon} alt="" />
             </button>
           </div>
@@ -430,6 +434,10 @@ const CampaignsPage = () => {
         description="Канал удалится из базы и чтобы возобновить продажу рекламы, потребуется новая регистрация"
         isOpen={deleteModal}
         onClose={() => setDeleteModal(false)}
+      />
+      <AllChanels
+        isOpen={allChannelsModal}
+        onClose={() => setAllChannelsModal(false)}
       />
     </div>
   );
