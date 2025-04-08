@@ -116,27 +116,57 @@ const AddChannel = ({ isOpen = false, onClose }) => {
               </h5>
               <div className="checkbox-group">
                 <div className="form-control">
-                  <input type="checkbox" id="1" className="form-check" />
+                  <input
+                    type="checkbox"
+                    id="1"
+                    className="form-check"
+                    checked={false}
+                  />
                   <label htmlFor="1">18+</label>
                 </div>
                 <div className="form-control">
-                  <input type="checkbox" id="2" className="form-check" />
+                  <input
+                    type="checkbox"
+                    id="2"
+                    className="form-check"
+                    checked={false}
+                  />
                   <label htmlFor="2">ставки</label>
                 </div>
                 <div className="form-control">
-                  <input type="checkbox" id="3" className="form-check" />
+                  <input
+                    type="checkbox"
+                    id="3"
+                    className="form-check"
+                    checked={false}
+                  />
                   <label htmlFor="3">о криптовалютах</label>
                 </div>
                 <div className="form-control">
-                  <input type="checkbox" id="4" className="form-check" />
+                  <input
+                    type="checkbox"
+                    id="4"
+                    className="form-check"
+                    checked={false}
+                  />
                   <label htmlFor="4">казино</label>
                 </div>
                 <div className="form-control">
-                  <input type="checkbox" id="5" className="form-check" />
+                  <input
+                    type="checkbox"
+                    id="5"
+                    className="form-check"
+                    checked={false}
+                  />
                   <label htmlFor="5">шок-контент, треш</label>
                 </div>
                 <div className="form-control">
-                  <input type="checkbox" id="6" className="form-check" />
+                  <input
+                    type="checkbox"
+                    id="6"
+                    className="form-check"
+                    checked={false}
+                  />
                   <label htmlFor="6">военного характера</label>
                 </div>
               </div>

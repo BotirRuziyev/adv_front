@@ -63,6 +63,13 @@
                             }
                         }
                     }
+                    &.delete-btn {
+                        img {
+                            &:first-child {
+                                display: block;
+                            }
+                        }
+                    }
                 }
             }
         }

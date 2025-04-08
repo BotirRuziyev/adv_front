@@ -54,4 +54,7 @@
 .advertisement-page .channels-table .table .table-body .td.status-td span.bg-orange {
   color: #f00;
   background: #ffcece;
+}
+.advertisement-page .channels-table .table .table-body .td.delete-btn img:first-child {
+  display: block;
 }/*# sourceMappingURL=advertisement.css.map */

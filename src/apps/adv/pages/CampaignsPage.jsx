@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import GlobalSwiper from "../../../components/channel-swiper/GlobalSwiper";
+import DownloadReportModal from "../../../components/download-report/DownloadReportModal";
+import AddChannnel from "../../../components/add-channel-modal/AddChannnel";
+import TableModal from "../../../components/table-modal/TableModal";
 import "./css/advertisement.css";
 
 import addchanel from "@/assets/images/add-user.svg";
@@ -9,10 +12,12 @@ import burgerIcon from "@/assets/icons/burger.svg";
 import filestats from "@/assets/icons/file-stats.svg";
 import deleteIcon from "@/assets/icons/Status_delete_button.svg";
 import cloceCircle from "@/assets/icons/clock-circle.svg";
-import DownloadReportModal from "../../../components/download-report/DownloadReportModal";
+import deletegradientIcon from "@/assets/icons/Status_delete_button-gradient.svg";
 
 const CampaignsPage = () => {
   const [onOpen, setOpen] = useState(false);
+  const [addChannel, setAddChannel] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
   document.title = "Главная страница";
   const [selectedAvatar] = useState(() => {
     return (
@@ -77,6 +82,11 @@ const CampaignsPage = () => {
   const onClose = () => {
     setOpen(false);
   };
+  const openAddChanelModal = () => setAddChannel(true);
+  const closeAddChanelModal = () => setAddChannel(false);
+  const deleteModalOpen = () => {
+    setDeleteModal(true);
+  };
   return (
     <div className="advertisement-page">
       <header className="page-header">
@@ -90,7 +100,7 @@ const CampaignsPage = () => {
         <div className="main-page">
           <div className="channels">
             <GlobalSwiper slides={slides} />
-            <button className="add-channel-btn">
+            <button className="add-channel-btn" onClick={openAddChanelModal}>
               <img src={addchanel} alt="" />
               Добавить канал
             </button>
@@ -211,10 +221,11 @@ const CampaignsPage = () => {
                   <td className="td">2 000 ₽</td>
                   <td className="td">200 000 ₽</td>
                   <td className="td actions-td">
-                    <button className="pause-btn">
+                    <button className="clock-btn">
                       <img src={cloceCircle} alt="" />
                     </button>
-                    <button className="delete-btn">
+                    <button className="delete-btn" onClick={deleteModalOpen}>
+                      <img src={deletegradientIcon} alt="" />
                       <img src={deleteIcon} alt="" />
                     </button>
                   </td>
@@ -242,10 +253,11 @@ const CampaignsPage = () => {
                   <td className="td">2 000 ₽</td>
                   <td className="td">200 000 ₽</td>
                   <td className="td actions-td">
-                    <button className="pause-btn">
+                    <button className="clock-btn">
                       <img src={cloceCircle} alt="" />
                     </button>
-                    <button className="delete-btn">
+                    <button className="delete-btn" onClick={deleteModalOpen}>
+                      <img src={deletegradientIcon} alt="" />
                       <img src={deleteIcon} alt="" />
                     </button>
                   </td>
@@ -273,10 +285,11 @@ const CampaignsPage = () => {
                   <td className="td">2 000 ₽</td>
                   <td className="td">200 000 ₽</td>
                   <td className="td actions-td">
-                    <button className="pause-btn">
+                    <button className="clock-btn">
                       <img src={cloceCircle} alt="" />
                     </button>
-                    <button className="delete-btn">
+                    <button className="delete-btn" onClick={deleteModalOpen}>
+                      <img src={deletegradientIcon} alt="" />
                       <img src={deleteIcon} alt="" />
                     </button>
                   </td>
@@ -304,10 +317,11 @@ const CampaignsPage = () => {
                   <td className="td">2 000 ₽</td>
                   <td className="td">200 000 ₽</td>
                   <td className="td actions-td">
-                    <button className="pause-btn">
+                    <button className="clock-btn">
                       <img src={cloceCircle} alt="" />
                     </button>
-                    <button className="delete-btn">
+                    <button className="delete-btn" onClick={deleteModalOpen}>
+                      <img src={deletegradientIcon} alt="" />
                       <img src={deleteIcon} alt="" />
                     </button>
                   </td>
@@ -335,10 +349,11 @@ const CampaignsPage = () => {
                   <td className="td">2 000 ₽</td>
                   <td className="td">200 000 ₽</td>
                   <td className="td actions-td">
-                    <button className="pause-btn">
+                    <button className="clock-btn">
                       <img src={cloceCircle} alt="" />
                     </button>
-                    <button className="delete-btn">
+                    <button className="delete-btn" onClick={deleteModalOpen}>
+                      <img src={deletegradientIcon} alt="" />
                       <img src={deleteIcon} alt="" />
                     </button>
                   </td>
@@ -409,6 +424,13 @@ const CampaignsPage = () => {
         </div>
       </div>
       <DownloadReportModal isOpen={onOpen} onClose={onClose} />
+      <AddChannnel isOpen={addChannel} onClose={closeAddChanelModal} />
+      <TableModal
+        title="Вы точно хотите удалить канал?"
+        description="Канал удалится из базы и чтобы возобновить продажу рекламы, потребуется новая регистрация"
+        isOpen={deleteModal}
+        onClose={() => setDeleteModal(false)}
+      />
     </div>
   );
 };

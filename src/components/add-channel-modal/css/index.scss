@@ -78,11 +78,13 @@
                     padding: 0;
                     svg {
                         display: block;
+                        path {
+                            fill: #4e4e4e;
+                        }
                     }
                 }
             }
             .MuiTextField-root {
-                border: 1px solid #d9d9d9;
                 border-radius: 6px;
                 position: relative;
                 input {
